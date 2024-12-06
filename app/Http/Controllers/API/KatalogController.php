@@ -54,6 +54,7 @@ class KatalogController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $idUser = auth()->user()->id_user;
         $id_detail_penjual = DB::table('detail_penjual')->where('user_id', $idUser)->first()->id_detail_penjual;
 
